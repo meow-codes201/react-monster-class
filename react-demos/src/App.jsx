@@ -1,9 +1,12 @@
 import "./App.css";
-import WelcomeMessage from "./WelcomeMessage";
+import Person from "./Person";
+import Products from "./Products";
 function App() {
   return (
     <>
-      <WelcomeMessage />
+      <Person name="John Doe" age={40} />
+
+      <Products name="Laptop" price={1200} />
     </>
   );
 }
