@@ -1,0 +1,9 @@
+.card {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.title {
+  color: darkblue;
+}
