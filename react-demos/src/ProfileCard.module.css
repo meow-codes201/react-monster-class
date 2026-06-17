@@ -1,0 +1,13 @@
+.card {
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 8px;
+  color: black;
+}
+.title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.img {
+  height: 180px;
+}
