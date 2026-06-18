@@ -2,9 +2,11 @@ import "./App.css";
 import ProfileCard from "./ProfileCard";
 import StyleCard from "./StyleCard";
 import IconComponent from "./IconComponent";
+import Button from "./Button";
 function App() {
   return (
     <>
+      <Button />
       <StyleCard message="Hello, World!" />
       <ProfileCard name="Iron Man" />
       <IconComponent />
