@@ -8,10 +8,14 @@ import MouseMovEvent from "./MouseMovEvent";
 import UseStateHook from "./UseStateHook";
 import FriendsState from "./FriendsState";
 import StateinObj from "./StateinObj";
+import ArrayOfObjState from "./ArrayOfObjState";
+import Local from "./Local";
+import Counter from "./Counter";
+import Todo from "./Todo";
 function App() {
   return (
     <>
-      <StateinObj />
+      <Todo />
     </>
   );
 }
