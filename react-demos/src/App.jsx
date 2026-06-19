@@ -12,10 +12,12 @@ import ArrayOfObjState from "./ArrayOfObjState";
 import Local from "./Local";
 import Counter from "./Counter";
 import Todo from "./Todo";
+import Profile from "./Profile";
+import ShoppingList from "./ShoppingList";
 function App() {
   return (
     <>
-      <Todo />
+      <ShoppingList />
     </>
   );
 }
