@@ -14,12 +14,29 @@ import Counter from "./Counter";
 import Todo from "./Todo";
 import Profile from "./Profile";
 import ShoppingList from "./ShoppingList";
+import { useState, useEffect } from "react";
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+      const data = await res.json();
+      if (data && data.length) {
+        setData(data);
+      }
+    }
+    getData();
+  }, []);
+
   return (
     <>
-      <ShoppingList />
+      <ul>
+        {data.map((todo) => (
+          <li key={todo.id}>{todo.title}</li>
+        ))}
+      </ul>
     </>
   );
 }
-
 export default App;
