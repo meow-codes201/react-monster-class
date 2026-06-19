@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     async function getData() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
       const data = await res.json();
       if (data && data.length) {
         setData(data);
@@ -33,7 +33,10 @@ function App() {
     <>
       <ul>
         {data.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
+          <li key={todo.id}>
+            <h3> title - {todo.title}</h3>
+            <p>Body: {todo.body || "No content"}</p>
+          </li>
         ))}
       </ul>
     </>
