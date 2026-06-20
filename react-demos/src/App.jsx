@@ -22,39 +22,16 @@ import ComponentA from "./ComponentA.jsx";
 import UserContext from "./UserContext.jsx";
 import UpdateUser from "./UpdateUser.jsx";
 import UserProfile from "./UserProfile.jsx";
-import { useReducer } from "react";
-
-const initialState = { count: 0 };
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "increment":
-      return { ...state, count: state.count + 1 };
-    case "decrement":
-      return { ...state, count: state.count - 1 };
-    case "reset":
-      return { ...state, count: 0 };
-    case "incBy5":
-      return { ...state, count: state.count + 5 };
-    case "decBy5":
-      return { ...state, count: state.count - 5 };
-    default:
-      return state;
-  }
-};
-
+import CounterR from "./CounterR";
+import { useRef } from "react";
+import FocusInput from "./FocusInput.jsx";
+import UniqueID from "./UniqueID.jsx";
+import Timer from "./Timer.jsx";
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
   return (
     <>
-      <h1>{state.count}</h1>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => dispatch({ type: "reset" })}>reset</button>
-      <button onClick={() => dispatch({ type: "incBy5" })}>Add 5</button>
-
-      <button onClick={() => dispatch({ type: "decBy5" })}>Sub 5</button>
+      <UniqueID />
+      <UniqueID />
     </>
   );
 }
