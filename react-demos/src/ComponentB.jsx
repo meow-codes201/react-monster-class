@@ -1,8 +1,8 @@
 import ComponentC from "./ComponentC";
-function ComponentB({ name }) {
+function ComponentB() {
   return (
     <>
-      <ComponentC name={name} />
+      <ComponentC />
     </>
   );
 }
