@@ -1,7 +1,10 @@
-function ComponentD({ name }) {
+function ComponentD() {
+  const name = "Versatile";
+  const age = 29;
   return (
     <>
-      <h1>Hi, my friendo {name}! NICE TO MEET YOU</h1>
+      <h1>Hello, I am {name}</h1>
+      <h1>Age : {age}</h1>
     </>
   );
 }
